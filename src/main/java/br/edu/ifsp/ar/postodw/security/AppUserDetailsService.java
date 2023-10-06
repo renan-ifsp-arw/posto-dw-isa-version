@@ -1,10 +1,7 @@
-package br.edu.ifsp.arq.dw2s6.iftiness.security;
+package br.edu.ifsp.ar.postodw.security;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
-
+import br.edu.ifsp.ar.postodw.model.User;
+import br.edu.ifsp.ar.postodw.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -13,8 +10,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import br.edu.ifsp.arq.dw2s6.iftiness.domain.model.User;
-import br.edu.ifsp.arq.dw2s6.iftiness.repository.UserRepository;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class AppUserDetailsService implements UserDetailsService {

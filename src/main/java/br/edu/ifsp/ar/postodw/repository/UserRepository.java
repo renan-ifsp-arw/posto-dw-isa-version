@@ -1,10 +1,9 @@
-package br.edu.ifsp.arq.dw2s6.iftiness.repository;
+package br.edu.ifsp.ar.postodw.repository;
 
-import java.util.Optional;
-
+import br.edu.ifsp.ar.postodw.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.edu.ifsp.arq.dw2s6.iftiness.domain.model.User;
+import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User, Long>{
 	

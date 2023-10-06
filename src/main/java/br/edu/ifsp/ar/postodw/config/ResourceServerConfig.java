@@ -1,4 +1,4 @@
-package br.edu.ifsp.arq.dw2s6.iftiness.config;
+package br.edu.ifsp.ar.postodw.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

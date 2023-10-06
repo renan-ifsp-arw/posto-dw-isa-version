@@ -1,10 +1,9 @@
-package br.edu.ifsp.arq.dw2s6.iftiness.domain.model;
-
-import java.util.Objects;
+package br.edu.ifsp.ar.postodw.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Objects;
 
 @Entity
 @Table(name = "permission")

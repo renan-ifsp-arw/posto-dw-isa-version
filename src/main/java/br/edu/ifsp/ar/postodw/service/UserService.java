@@ -1,12 +1,11 @@
-package br.edu.ifsp.arq.dw2s6.iftiness.service;
+package br.edu.ifsp.ar.postodw.service;
 
+import br.edu.ifsp.ar.postodw.model.User;
+import br.edu.ifsp.ar.postodw.repository.UserRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
-
-import br.edu.ifsp.arq.dw2s6.iftiness.domain.model.User;
-import br.edu.ifsp.arq.dw2s6.iftiness.repository.UserRepository;
 
 @Service
 public class UserService {

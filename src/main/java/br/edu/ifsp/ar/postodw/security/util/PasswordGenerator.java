@@ -1,4 +1,4 @@
-package br.edu.ifsp.arq.dw2s6.iftiness.security.util;
+package br.edu.ifsp.ar.postodw.security.util;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

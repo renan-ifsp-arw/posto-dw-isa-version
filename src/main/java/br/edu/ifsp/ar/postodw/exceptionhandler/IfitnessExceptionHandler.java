@@ -1,9 +1,4 @@
-package br.edu.ifsp.arq.dw2s6.iftiness.exceptionhandler;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+package br.edu.ifsp.ar.postodw.exceptionhandler;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +18,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import br.edu.ifsp.arq.dw2s6.iftiness.service.exception.NonExistentOrInactiveUserException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 
 @ControllerAdvice
 public class IfitnessExceptionHandler extends 
@@ -79,14 +77,14 @@ public class IfitnessExceptionHandler extends
 		return handleExceptionInternal(ex, errors, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
 	}
 	
-	@ExceptionHandler({ NonExistentOrInactiveUserException.class } )
-	public ResponseEntity<Object> handleNonExistentOrInactiveUserException(NonExistentOrInactiveUserException ex) {
-		String userMessage = messageSource
-				.getMessage("user.non-existent-or-inactive", null, LocaleContextHolder.getLocale());
-		String developerMessage = ExceptionUtils.getRootCauseMessage(ex);
-		List<Error> errors = Arrays.asList(new Error(userMessage, developerMessage));
-		return ResponseEntity.badRequest().body(errors);
-	}
+//	@ExceptionHandler({ NonExistentOrInactiveUserException.class } )
+//	public ResponseEntity<Object> handleNonExistentOrInactiveUserException(NonExistentOrInactiveUserException ex) {
+//		String userMessage = messageSource
+//				.getMessage("user.non-existent-or-inactive", null, LocaleContextHolder.getLocale());
+//		String developerMessage = ExceptionUtils.getRootCauseMessage(ex);
+//		List<Error> errors = Arrays.asList(new Error(userMessage, developerMessage));
+//		return ResponseEntity.badRequest().body(errors);
+//	}
 	
 	private List<Error> createErrorsList(BindingResult bindingResult) {
 		List<Error> errors = new ArrayList<>();
