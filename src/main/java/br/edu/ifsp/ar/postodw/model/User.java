@@ -32,7 +32,7 @@ public class User {
 	private String email;
 
 	@NotNull
-	@Size(min = 6, max = 8)
+	@Size(min = 6, max = 150) //anterio max = 8 alterando tamanho da senha R13
 	private String password;
 
 	@Min(value = 12)
