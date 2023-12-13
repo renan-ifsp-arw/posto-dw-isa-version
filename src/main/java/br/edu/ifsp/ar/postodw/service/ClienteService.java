@@ -3,10 +3,13 @@ package br.edu.ifsp.ar.postodw.service;
 import br.edu.ifsp.ar.postodw.model.Bomba;
 import br.edu.ifsp.ar.postodw.model.Cliente;
 import br.edu.ifsp.ar.postodw.repository.ClienteRepository;
+import br.edu.ifsp.ar.postodw.repository.fliter.ClienteFilter;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -34,6 +37,9 @@ public class ClienteService {
     public Cliente findClienteById(Long id) {
     	Cliente clienteSaved = clienteRepository.findById(id).orElseThrow(() -> new EmptyResultDataAccessException(1));
 		return clienteSaved;
+	}
+    public Page<Cliente> search(ClienteFilter clienteFilter, Pageable pageable){
+		return clienteRepository.filter(clienteFilter, pageable);
 	}
 
 }

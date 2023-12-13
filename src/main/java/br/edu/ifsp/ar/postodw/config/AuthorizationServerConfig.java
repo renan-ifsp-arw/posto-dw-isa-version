@@ -47,15 +47,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 			.refreshTokenValiditySeconds(3600 * 24);
 	}
 	
-	/*@Override
-	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-		endpoints
-			.tokenStore(tokenStore())
-			.accessTokenConverter(AccessTokenConverter())
-			.reuseRefreshTokens(false)
-			.userDetailsService(userDetailsService)
-			.authenticationManager(authenticationManager);
-	}*/
+	
 	
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {

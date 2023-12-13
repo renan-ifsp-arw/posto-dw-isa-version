@@ -2,11 +2,11 @@ package br.edu.ifsp.ar.postodw.repository.fliter;
 
 import javax.validation.constraints.Pattern;
 
-import br.edu.ifsp.ar.postodw.model.User;
+
 
 public class ClienteFilter {
 
-	private User user;
+	
 	
 	private String nome;
 
@@ -31,12 +31,5 @@ public class ClienteFilter {
 		this.documento = documento;
 	}
 
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
 	
 }
